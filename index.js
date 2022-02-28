@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const Employee = require('.lib/Employee.js');
+const Employee = require('lib/Employee');
 const employee = new Employee();
 
 inquirer.prompt([
@@ -23,4 +23,3 @@ inquirer.prompt([
     employee(name,id, email)
     })
 
-console.log (Employee)
