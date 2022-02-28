@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
-const Employee = require('lib/Employee');
-const employee = new Employee();
+const Employee = require('./lib/Employee.js');
+// const employee = new Employee();
 
 inquirer.prompt([
         {
@@ -20,6 +20,7 @@ inquirer.prompt([
         }
     ])
     .then(({name, id, email}) => {
-    employee(name,id, email)
+    const employee = new Employee(name,id, email)
+    console.log (employee)
     })
 
