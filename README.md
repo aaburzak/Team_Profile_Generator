@@ -26,5 +26,5 @@ Tests are built with jest and found in the "tests" folder.
 
 ## Questions
 
-For any questions about this project please contact at https://github.comaaburzak or by email at n/a@gmail.com 
+For any questions about this project please contact at https://github.com/aaburzak or by email at n/a@gmail.com 
 
