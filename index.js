@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const Employee = require('./lib/Employee.js');
+const Engineer= require('./lib/Engineer.js');
 // const employee = new Employee();
 
 inquirer.prompt([
@@ -17,10 +17,15 @@ inquirer.prompt([
             type: "input",
             name: "email",
             message: "Please enter the employee's e-mail address:"
-        }
+        },
+        {
+            type: "input",
+            name: "github",
+            message:"Please enter the employee's github username"
+        },
     ])
-    .then(({name, id, email}) => {
-    const employee = new Employee(name,id, email)
-    console.log (employee)
+    .then(({name, id, email, github}) => {
+    const engineer = new Engineer(name,id, email, github)
+    console.log (engineer)
     })
 
