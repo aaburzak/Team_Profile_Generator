@@ -7,7 +7,7 @@ describe('Manager', () => {
             expect(manager.name).toBe('jenny');
             expect(manager.id).toBe('8675309');
             expect(manager.email).toBe('tommy@twotone.com');
-            expect(manager.officeNumber).toBe('101')
+            expect(manager.office).toBe('101')
             });
             
         it('should retrieve the name from getName method', ()=>{
@@ -27,7 +27,7 @@ describe('Manager', () => {
 
         it('should to retrieve the github username from getGithub method', ()=>{
             const manager = new Manager ('jenny', '8675309', 'tommy@twotone.com', '101');
-            expect(manager.getOfficeNumber()).toBe('101');
+            expect(manager.getOffice()).toBe('101');
         });
     });
 })
