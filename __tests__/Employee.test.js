@@ -1,4 +1,3 @@
-// const  jest = require('jest')
 const Employee = require('../lib/Employee.js');
 
 describe('Employee', () => {

@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const Engineer= require('./lib/Engineer.js');
-// const employee = new Employee();
+const Manager= require('./lib/Manager.js');
+const Intern = require('./lib/Intern.js');
 
 inquirer.prompt([
         {
@@ -29,3 +30,56 @@ inquirer.prompt([
     console.log (engineer)
     })
 
+inquirer.prompt([
+    {
+        type: "input",
+        name: "name",
+        message: "Please enter the employee's name:"
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Please enter the employee's id number:"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Please enter the employee's e-mail address:"
+    },
+    {
+        type: "input",
+        name: "officeNumber",
+        message:"Please enter the employee's office number"
+    },
+])
+.then(({name, id, email, officeNumber}) => {
+const manager = new Manager (name,id, email, officeNumber )
+console.log (manager)
+})
+
+inquirer.prompt([
+    {
+        type: "input",
+        name: "name",
+        message: "Please enter the employee's name:"
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Please enter the employee's id number:"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Please enter the employee's e-mail address:"
+    },
+    {
+        type: "input",
+        name: "school",
+        message:"Please enter the name of the employee's school:"
+    },
+])
+.then(({name, id, email, school}) => {
+const intern = new Intern (name,id, email, school )
+console.log (intern)
+})
