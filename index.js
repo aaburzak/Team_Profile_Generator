@@ -30,27 +30,6 @@ function selectRole(){
         })
 }
 
-function completeCheck(){
-    inquirer.prompt([
-        {
-            type: "list",
-            name : "complete",
-            message: "Is the team complete?",
-            choices: [
-                "Yes",
-                "No, add another team member."
-            ]
-        }
-    ])
-    .then(({complete}) => {
-        if (complete === "Yes"){
-            console.log("Finished")
-        }else {
-            selectRole()
-        }
-    })
-}
-
 function newIntern (){
     inquirer.prompt([
         {
@@ -138,5 +117,26 @@ function newManager(){
     const manager = new Manager (name,id, email, office)
     console.log (manager)
     completeCheck()
+    })
+}
+
+function completeCheck(){
+    inquirer.prompt([
+        {
+            type: "list",
+            name : "complete",
+            message: "Is the team complete?",
+            choices: [
+                "Yes",
+                "No (add another team member)"
+            ]
+        }
+    ])
+    .then(({complete}) => {
+        if (complete === "Yes"){
+            console.log("Finished")
+        }else {
+            selectRole()
+        }
     })
 }
