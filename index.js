@@ -9,9 +9,10 @@ const Intern = require('./lib/Intern.js');
 const siteGen = require('./src/siteGen.js');
 const roster = [];
 
-
+//starts the application
 selectRole()
 
+//allows user to choose which employee role they want to input
 function selectRole(){
     inquirer.prompt([
             {
@@ -36,6 +37,7 @@ function selectRole(){
         })
 }
 
+//collects user information on Manager role through prompts, then pushes information to the roster array and sends user to confirm completion
 function newManager(){
     inquirer.prompt([
         {
@@ -67,6 +69,7 @@ function newManager(){
     })
 }
 
+//collects user information on Engineer role through prompts, then pushes information to the roster array and sends user to confirm completion
 function newEngineer(){
     inquirer.prompt([
         {
@@ -98,6 +101,7 @@ function newEngineer(){
     })
 }
 
+//collects user information on Intern role through prompts, then pushes information to the roster array and sends user to confirm completion
 function newIntern (){
     inquirer.prompt([
         {
@@ -129,6 +133,7 @@ function newIntern (){
     })
 }
 
+//confirms if the user is finished adding team members, sends them to selectRole() if not finished, builds the team based of roster array if they are finshed
 function completeCheck(){
     inquirer.prompt([
         {
@@ -150,6 +155,7 @@ function completeCheck(){
     })
 }
 
+//creates pathway to siteGen.js and sends the team roster to siteGen.js to build the html
 function generateHtml(){
     console.log("Team Build Successful!");
 
@@ -157,41 +163,4 @@ function generateHtml(){
         fs.mkdirSync(OUTPUT_DIR)
     }
     fs.writeFileSync(outputPath, siteGen(roster), "utf-8");
-
-//     fs.writeFile('index.html',
-    
-// `
-// <!DOCTYPE html>
-// <html lang="en">
-//     <head>
-//         <meta charset="UTF-8" />
-//         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-//         <meta http-equivx="X-UA-Compatible" content="ie=edge" />
-//         <title>New Team</title>
-//     </head>
-//     <body>
-//         <div>
-//             <h1>Manager</h1>
-//             <p>Name: ${roster[0].name}</p>
-//             <p>Employee Id: ${roster[0].id}</p>
-            // <p>Email: <a href="mailto:${roster[0].email}">${roster[0].email}</a></p>
-//             <p>Office: ${roster[0].office}</p>
-//         </div>
-//         <div>
-//             <h1>Engineer</h1>
-//             <p>Name: ${roster[1].name}</p>
-//             <p>Employee Id: ${roster[1].id}</p>
-//             <p>Email: <a href="mailto:${roster[1].email}">${roster[1].email}</a></p>
-//             <p>GitHub: <a href="https://github.com/${roster[1].github}"> ${roster[1].github}</a></p>
-//         </div>
-//         <div>
-//             <h1>Intern</h1>
-//             <p>Name: ${roster[2].name}</p>
-//             <p>Employee Id: ${roster[2].id}</p>
-//             <p>Email: <a href="mailto:${roster[2].email}">${roster[2].email}</a></p>
-//             <p>School: ${roster[2].school}</p>
-//         </div>
-//     </body>
-// `,
-// (err) => err ? console.error(err) : console.log('Successfully Generated HTML!'))
 };

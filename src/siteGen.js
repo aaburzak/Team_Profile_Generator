@@ -1,3 +1,4 @@
+//accepts the roster from index.js, loops through and generates html page with divs for each role in the array
 const teamGen = (roster) => {
     console.log(roster);
 
