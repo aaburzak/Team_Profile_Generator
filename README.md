@@ -13,7 +13,7 @@ Utilizes node.js to create an html site containing contact information for membe
 - [Questions](#questions)
 
 ## Installation
-node.js, npm, inquirer, and jest will be needed to run this application
+node.js, npm, inquirer, path, and jest will be needed to run this application
 
 ## Usage
 once necessary dependencies are installed, follow prompts on the command line to generate a team profile.
@@ -26,5 +26,5 @@ Tests are built with jest and found in the "tests" folder.
 
 ## Questions
 
-For any questions about this project please contact at https://github.com/aaburzak or by email at n/a@gmail.com 
+For any questions about this project please contact at https://github.com/aaburzak or by email at aaron.j.burzak@gmail.com 
 

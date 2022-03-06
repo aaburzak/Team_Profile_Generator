@@ -1,0 +1,29 @@
+body {
+    background: radial-gradient( rgb(19, 10, 66) 0%, rgba(54, 90, 110, 0.954) 100%);
+    color: rgb(233, 217, 217);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+.card  {
+    background: radial-gradient( rgb(225, 222, 238) 0%, rgba(131, 194, 228, 0.954) 100%);
+    color: darkblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+}
+
+a{
+    color: rgb(167, 98, 15);
+}
